@@ -1,6 +1,6 @@
 
 const $ = (id) => document.getElementById(id);
-const CHAT_KEY = "sexta-feira-chat-v2";
+const CHAT_KEY = "sexta-feira-chat-v1";
 const MEMORY_KEY = "sexta-feira-memory-v1";
 
 // Endereço real do Worker criado no Cloudflare
