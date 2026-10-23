@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#07111f">
+  <meta name="description" content="Sexta-Feira — sua assistente pessoal.">
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="icon" href="./icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./styles.css">
+  <title>Sexta-Feira</title>
+</head>
+<body>
+  <main class="app">
+    <header class="topbar">
+      <div class="brand"><div class="mini-orb" aria-hidden="true"></div><div><h1>SEXTA-FEIRA</h1><p>ASSISTENTE PESSOAL</p></div></div>
+      <button id="installBtn" class="small-btn" hidden>Instalar</button>
+    </header>
+
+    <section class="hero">
+      <div class="orb-wrap"><div class="orb"><div class="orb-core"></div></div></div>
+      <p class="eyebrow" id="status">SISTEMAS LOCAIS ONLINE</p>
+      <h2>À sua disposição.</h2>
+      <p class="sub">Assistente híbrida • Protótipo local</p>
+    </section>
+
+    <section class="panel">
+      <div class="panel-head"><h3>Conversa</h3><button id="clearChat" class="text-btn">Limpar</button></div>
+      <div id="chat" class="chat" aria-live="polite">
+        <article class="msg assistant"><span class="speaker">SEXTA-FEIRA</span><p>Boa noite. Estou pronta. Nesta primeira versão consigo conversar por comandos locais, guardar suas notas neste aparelho e falar em voz alta. A inteligência online será conectada na próxima etapa.</p></article>
+      </div>
+      <form id="chatForm" class="composer">
+        <input id="messageInput" autocomplete="off" placeholder="Diga ou escreva um comando..." aria-label="Mensagem">
+        <button class="send-btn" type="submit" aria-label="Enviar">➤</button>
+      </form>
+      <div class="actions">
+        <button id="micBtn" class="action-btn"><span>🎙</span> Falar</button>
+        <button id="speakToggle" class="action-btn active"><span>🔊</span> Voz ligada</button>
+      </div>
+    </section>
+
+    <section class="panel">
+      <div class="panel-head"><h3>Memória pessoal</h3><span class="local-tag">SALVA NESTE APARELHO</span></div>
+      <p class="hint">Diga “lembre que …” para guardar uma nota ou adicione abaixo. Não salve senhas ou dados bancários.</p>
+      <form id="memoryForm" class="memory-form">
+        <input id="memoryInput" placeholder="Ex.: prefiro respostas diretas" aria-label="Nova memória">
+        <button type="submit" class="outline-btn">Salvar</button>
+      </form>
+      <ul id="memoryList" class="memory-list"></ul>
+    </section>
+
+    <section class="panel">
+      <div class="panel-head"><h3>Acesso rápido</h3><span class="local-tag">ATALHOS WEB</span></div>
+      <div class="shortcut-grid">
+        <button data-url="https://www.google.com" class="shortcut"><span>⌕</span> Pesquisa</button>
+        <button data-url="https://calendar.google.com" class="shortcut"><span>▦</span> Agenda</button>
+        <button data-url="https://maps.google.com" class="shortcut"><span>⌖</span> Mapas</button>
+        <button data-url="https://github.com" class="shortcut"><span>⌘</span> Programar</button>
+      </div>
+      <p class="hint">Estes atalhos abrem sites. A PWA não pode controlar livremente outros apps nem alterar configurações protegidas do Android.</p>
+    </section>
+    <footer>SEXTA-FEIRA v0.1 • Seus dados locais ficam neste navegador.</footer>
+  </main>
+  <script src="./app.js" defer></script>
+</body>
+</html>
